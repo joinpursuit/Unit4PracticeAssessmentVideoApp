@@ -5,8 +5,8 @@ For this Assessment you will be building a simple YouTube client application. Yo
 ## Task
 
 - Create a React App with three pages; Home, Video and About
-- You will use the official YouTube Data API v3. 
-- Your app must make use of React Router for having multiple pages. 
+- You will use the official YouTube Data API v3.
+- Your app must make use of React Router for having multiple pages.
 - Your app may NOT use any other dependencies other than the following:
   - `react` and its accompanying libraries like `react-dom` and `react-scripts`.
   - `react-router-dom`
@@ -18,27 +18,33 @@ For this Assessment you will be building a simple YouTube client application. Yo
 ## Setup and the YouTube API
 
 ### API Key
-  * To be able to make requests/calls to the YouTube API you will need to get an API key and use it in your network requests. Learn [How to get an API key here](how_to_get_youtube_api_key.md). Once obtained, the key needs to be used in a url [query parameter](https://en.wikipedia.org/wiki/Query_string#Structure) like so: `key=YOUR_API_KEY`. 
-  * Once you receive the API Key put it inside of a file in `src/` that can be named `secrets.js` and export it like so:
-  ```js
-  // src/secrets.js
-  const API_KEY = "YOUR_ACTUAL_API_KEY"
-  export default API_KEY
-  ```
-  Then import your key as you would import anything else and use it as needed in your files. Make sure to add the name of this file to your `.gitignore` file so that it is not tracked by git and your API Key doesn't end up on GitHub (where it will be stolen).
+
+- To be able to make requests/calls to the YouTube API you will need to get an API key and use it in your network requests. Learn [How to get an API key here](how_to_get_youtube_api_key.md). Once obtained, the key needs to be used in a url [query parameter](https://en.wikipedia.org/wiki/Query_string#Structure) like so: `key=YOUR_API_KEY`.
+- Once you receive the API Key put it inside of a file in `src/` that can be named `secrets.js` and export it like so:
+
+```js
+// src/secrets.js
+const API_KEY = "YOUR_ACTUAL_API_KEY";
+export default API_KEY;
+```
+
+Then import your key as you would import anything else and use it as needed in your files. Make sure to add the name of this file to your `.gitignore` file so that it is not tracked by git and your API Key doesn't end up on GitHub (where it will be stolen).
 
 ### API Endpoints
-  * YouTube API root endpoint: `https://www.googleapis.com/youtube/v3`
-  * The two endpoints you will need are:
-    * `GET` `/search` [Docs Here](https://developers.google.com/youtube/v3/docs/search/list)
-    * `GET` `/videos` [Docs Here](https://developers.google.com/youtube/v3/docs/videos/list)
+
+- YouTube API root endpoint: `https://www.googleapis.com/youtube/v3`
+- The two endpoints you will need are:
+  - `GET` `/search` [Docs Here](https://developers.google.com/youtube/v3/docs/search/list)
+  - `GET` `/videos` [Docs Here](https://developers.google.com/youtube/v3/docs/videos/list)
 
 ### Playing a Video
-  * To embed the YouTube player and show a video in your application install and use the npm package `react-youtube`. As always read [its documentation](https://www.npmjs.com/package/react-youtube). The docs have an example of how to use this package and its component.
+
+- To embed the YouTube player and show a video in your application install and use the npm package `react-youtube`. As always read [its documentation](https://www.npmjs.com/package/react-youtube). The docs have an example of how to use this package and its component.
 
 # The App
 
 ## Required Features
+
 - Navbar with links
 - Homepage with search form and results area
 - Video page to play a video and leave comments
@@ -46,12 +52,12 @@ For this Assessment you will be building a simple YouTube client application. Yo
 - Should be styled to the best of your ability
 
 ### Navbar
+
 - Must show on every page/route of the application.
 - Shows a logo (In this case says Youtube)
 - Shows links to the following pages:
   - Home
   - About
-
 
 ### Homepage `/`
 
@@ -61,7 +67,7 @@ For this Assessment you will be building a simple YouTube client application. Yo
   - a search input Field
   - a search button
 - Initially show a message like `No Search Results. Search for videos above!` in the place where the search results would later appear.
-- Once the user enters a new search, they can press `Search` or `Enter` to get results. 
+- Once the user enters a new search, they can press `Search` or `Enter` to get results.
 
 #### Search Results
 
@@ -69,7 +75,7 @@ For this Assessment you will be building a simple YouTube client application. Yo
 
 - Once a user submits a search your app should replace the original `No search results` message with the results
 - The results **MUST** me ordered in columns with **TWO** results per row
-- Display the first 8 results. No pagination is needed. 
+- Display the first 8 results. No pagination is needed.
 - For each video/result display:
   - The video thumbnail image
   - The title of the video
