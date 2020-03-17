@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch>
-        <Route path={"/"}>
+        <Route exact path={"/"}>
           <HomePage />
         </Route>
         <Route path={"/video/:id"}>
@@ -20,6 +20,13 @@ function App() {
         <Route path={"/about"}>
           <About />
         </Route>
+        <Route
+          path="/youtube"
+          component={() => {
+            window.location = "https://youtube.com";
+            return null;
+          }}
+        />
       </Switch>
     </div>
   );

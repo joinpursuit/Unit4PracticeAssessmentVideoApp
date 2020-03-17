@@ -5,8 +5,10 @@ import { useInput } from "../util/customHooks.js";
 import { useState } from "react";
 import API_KEY from "../secrets";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 const HomePage = () => {
+  let history = useHistory();
   const [videos, setVideos] = useState(null);
   const searchInputObj = useInput("");
 
@@ -20,6 +22,7 @@ const HomePage = () => {
             part: "snippet",
             maxResults: 8,
             key: API_KEY,
+            type: "video",
             q: searchInputObj.value
           }
         }
@@ -30,13 +33,18 @@ const HomePage = () => {
     }
   };
 
+  const handleClick = e => {
+    e.preventDefault();
+    history.push(`/video/${e.target.id}`);
+  };
+
   return (
     <div className="home">
       <Search handleSubmit={handleSubmit} searchInputObj={searchInputObj} />
       {!videos ? (
         <p>No Search Results Yet! Please submit a search above!</p>
       ) : (
-        <DisplayResults videos={videos} />
+        <DisplayResults videos={videos} handleClick={handleClick} />
       )}
     </div>
   );

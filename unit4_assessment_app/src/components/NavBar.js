@@ -5,7 +5,9 @@ const NavBar = () => {
   //   let history = useHistory();
   return (
     <nav>
-      <h1>Youtube</h1>
+      <NavLink to={"/youtube"}>
+        <h1>Youtube</h1>
+      </NavLink>
       <NavLink exact to={"/"}>
         Home
       </NavLink>
