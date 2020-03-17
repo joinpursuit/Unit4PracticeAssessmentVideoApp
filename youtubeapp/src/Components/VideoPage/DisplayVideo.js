@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../UniversalComponents/Header'
+import Body from '../UniversalComponents/Body'
 
 const DisplayVideo = () => {
     return(
-        <h1>VIDEO</h1>
+        <div className="container">
+            <Header/>
+            <Body/>
+        </div>
     )
 }
 
