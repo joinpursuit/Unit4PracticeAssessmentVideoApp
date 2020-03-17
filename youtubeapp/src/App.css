@@ -44,3 +44,13 @@ table {
 }
 /* CSS RESET ENDS */
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+}
+.header {
+  display: flex;
+}
