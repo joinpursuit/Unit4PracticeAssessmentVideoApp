@@ -1,17 +1,19 @@
 import React from 'react';
-import About from '../src/components/About';
-import Home from '../src/components/Home';
+import Home from './components/Home';
+import About from './components/About';
+import NavBar from './components/NavBar';
 import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
+      <NavBar />
       <Switch >
-        <Route exact path={"/about"}>
-            <About/>
+        <Route exact path={"/home"}>
+            <Home />
         </Route>
-        <Route path={"/home"}>
-            <Home/>
+        <Route path={"/about"}>
+            <About />
         </Route>
       </Switch>
     </div>
