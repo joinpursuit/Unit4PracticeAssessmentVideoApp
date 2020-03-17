@@ -5,7 +5,8 @@ import '../css/NavBar.css';
 const NavBar = () => {
     return(
         <nav>
-            <NavLink to={"/home"}>Home</NavLink>
+            <h1>YouTube</h1>
+            <NavLink to={"/"}>Home</NavLink>
             <NavLink to={"/about"}>About</NavLink>
         </nav>
     );

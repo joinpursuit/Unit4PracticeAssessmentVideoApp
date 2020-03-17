@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Switch >
-        <Route exact path={"/home"}>
+        <Route exact path={"/"}>
             <Home />
         </Route>
         <Route path={"/about"}>
