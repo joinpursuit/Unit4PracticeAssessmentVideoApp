@@ -9,8 +9,20 @@ const Search = () =>{
     const handleChange =(e) =>{
         const value = e.target.value;
         let suggest = [];
-        
+        if(value.length > 0){
+            const regex = new RegExp(`${value}, i`);
+            suggest = list.sort().filter(el => regex.test(el)) 
+        }
+        setSuggest(suggest);
+        setSearch(value);
     }
+
+    const handleSelected=(value)=>{
+        setSearch(value);
+        setSuggest([]);
+    }
+
+    
 
 
 }
