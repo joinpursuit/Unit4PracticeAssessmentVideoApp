@@ -1,0 +1,19 @@
+nav {
+    background-color: #FC0000;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: large;
+    color: white; 
+    margin: 2%; 
+    font-weight: 500;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+    margin: 2%;
+}
