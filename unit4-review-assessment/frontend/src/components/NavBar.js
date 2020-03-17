@@ -1,24 +1,17 @@
 import React, {Component} from 'react';
-import Home from './Hompage';
-import About from './About';
-import Video from './Video'
-import {Route, Switch} from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
 
 export class NavBar extends Component {
     render(){
+        return (
         <div className='navBar'>
-            <Switch>
-            <Route exact path={'/'}>
-                <Home />
-            </Route>
-            <Route path={'/video/:id'}>
-                <Video />
-            </Route>
-            <Route path={'/about'}>
-                <About />
-            </Route>
-
-            </Switch>
+            <p>NavBar is here</p>
+            <NavLink exact to={'/home'}>Home</NavLink>
+            <NavLink exact to={'/about'}>About</NavLink>
+           
         </div>
+        )
     }
 }
+
+export default NavBar;
