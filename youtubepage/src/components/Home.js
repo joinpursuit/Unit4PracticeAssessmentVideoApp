@@ -19,20 +19,11 @@ const Home = () => {
         }
     }
 
-    const SingleVideo = async (video) =>{
-            try {
-                let res = await axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${video.id.videoId}&maxResults=8&key=${API_KEY}`);
-                console.log(res)
-            } catch (error) {
-                console.log(error)
-            }
-    }
-
     const ShowResults = searchResults.map((video,index) => {
-        debugger
+        let to = `/video/${video.id.videoId}`;
         return (
             <div key={index} className="video">
-                <Link to="/video" SingleVideo={SingleVideo(video)}>
+                <Link to={to} id={video.id.videoId}>
                     <img src={video.snippet.thumbnails.high.url}alt=""/>
                     <h3>{video.snippet.title}</h3>
                 </Link>

@@ -1,29 +1,32 @@
-import React, {useState} from "react";
-// import axios from "axios";
-// import API_KEY from "../secrets";
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+import API_KEY from "../secrets";
+import YouTube from "react-youtube";
 
-const VideoPlayer = ({SingleVideo}) => {
-    const showVideo = () => {
+const VideoPlayer = (id) => {
+    const [videoInfo, setVideoInfo] = useState({});
+    let videoId = id.match.params.id;
 
+    const currentVideo = async (id) =>{
+        debugger
+        try {
+            let res = await axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id}&maxResults=8&key=${API_KEY}`);
+            setVideoInfo(res.data.items[0])
+        } catch (error) {
+            console.log(error)
+        }
     }
+
+    useEffect(() => {
+        currentVideo(videoId)
+    }, [])
+
+
     return(
         <div>
-        hello
-            {/* <YouTube
-                videoId={string}                  // defaults -> null
-                id={string}                       // defaults -> null
-                className={string}                // defaults -> null
-                containerClassName={string}       // defaults -> ''
-                opts={obj}                        // defaults -> {}
-                onReady={func}                    // defaults -> noop
-                onPlay={func}                     // defaults -> noop
-                onPause={func}                    // defaults -> noop
-                onEnd={func}                      // defaults -> noop
-                onError={func}                    // defaults -> noop
-                onStateChange={func}              // defaults -> noop
-                onPlaybackRateChange={func}       // defaults -> noop
-                onPlaybackQualityChange={func}    // defaults -> noop
-            /> */}
+            <YouTube
+                videoId={videoInfo.id}                  // defaults -> null
+            />
         </div>
     )
 } 
