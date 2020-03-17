@@ -13,7 +13,6 @@ const Navbar = () => {
                 <ul>
                 <li><NavLink to={"/"} className="home">Home</NavLink></li>
                 <li><NavLink to={"/About"} className="about">About</NavLink></li>
-                <li><NavLink to={"/Video"} className="video">Video</NavLink></li>
                 </ul>
             </div>
             </nav> 
