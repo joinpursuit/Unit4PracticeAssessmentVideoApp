@@ -1,10 +1,13 @@
-import React from "react"
+import React from "react";
+
 const Navbar = () => {
   return(
     <nav>
-      <div>Youtube</div>
-      <div>Home</div>
-      <div>About</div>
+      <div className="navLogo">Youtube</div>
+      <div className="navRight">
+        <NavLink exact to="/" className="navAnchor">Home</NavLink>
+        <NavLink to="/about" className="navAnchor">About</NavLink>
+      </div>
     </nav>
   )
 }

@@ -1,11 +1,23 @@
 import React from 'react';
+import {Route} from "react-router-dom"
+import Navbar from './components/General/NavBar';
 import './App.css';
-import Navbar from './components/General/Navbar';
+// import '../components/CSS'
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <switch>
+      <Route exact path="/">
+            <Home
+              home={home}
+              // error={error}
+              // errorText={errorText}
+              // searchValue={searchValue}
+              //  setSearchValue={setSearchValue}
+            />
+          </Route>
+      </switch>
     </div>
   );
 }
