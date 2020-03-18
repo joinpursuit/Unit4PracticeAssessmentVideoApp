@@ -1,14 +1,15 @@
 import React from "react";
+import { link } from "react-router-dom";
 
-const Navbar = () => {
+const NavBar = () => {
   return(
     <nav>
-      <div className="navLogo">Youtube</div>
+      <div className="navLogo">Movie Youtube</div>
       <div className="navRight">
-        <NavLink exact to="/" className="navAnchor">Home</NavLink>
-        <NavLink to="/about" className="navAnchor">About</NavLink>
+        <Link exact to="/" className="navAnchor">Home</Link>
+        <Link to="/about" className="navAnchor">About</Link>
       </div>
     </nav>
   )
 }
-export default Navbar
+export default NavBar;
