@@ -8,12 +8,13 @@ const Search = ()=>{
     return (
         <div className="Search">
             <label>
-          Search:
           <input
             type="text"
             placeholder="Search Videos"
             {...searchVideos}
+        
           />
+          <button className="searchButton" placeholder="SEARCH">SEARCH</button>
         </label>
         </div>
     )
