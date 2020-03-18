@@ -4,9 +4,10 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return(
       <nav>
-          NavBar
+          YouTube
           <NavLink exact to={"/"}>HOME</NavLink>
           <NavLink to={"/about"}>ABOUT</NavLink>
+          <NavLink to={"/search"}>SEARCH</NavLink>
       </nav>
   )
 }
