@@ -5,9 +5,9 @@ const NavBar = () => {
   return(
       <nav>
           YouTube
-          <NavLink exact to={"/"}>HOME</NavLink>
+          <NavLink exact to={"/"}>HOMEPAGE</NavLink>
           <NavLink to={"/about"}>ABOUT</NavLink>
-        
+          <NavLink to={"/home"}>HOME</NavLink>
       </nav>
   )
 }

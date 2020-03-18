@@ -1,5 +1,18 @@
-import React from 'react';
 
-const Home = () => <div></div>;
+import React, {useState} from 'react'
 
-export default Home; 
+
+
+const About = ()=>{
+
+
+    return (
+        <div className="About">
+ 
+    
+            
+        </div>
+    )
+}
+
+export default About
