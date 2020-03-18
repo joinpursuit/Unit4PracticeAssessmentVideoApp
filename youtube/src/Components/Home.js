@@ -1,19 +1,5 @@
-import React, {useState} from 'react'
-import {NavLink} from 'react-router-dom'
-import axios from 'axios'
+import React from 'react';
 
-const Home = ()=>{
+const Home = () => <div></div>;
 
-
-}
-return (
-    <div className="Home">
-<p>
-    Home
-</p>
-
-        
-    </div>
-)
-
-export default Home
+export default Home; 

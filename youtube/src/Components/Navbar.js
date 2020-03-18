@@ -1,18 +1,14 @@
-import React, {useState} from 'react'
-import {NavLink} from 'react-router-dom'
-import axios from 'axios'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const NavBar = ()=>{
-
-
+const NavBar = () => {
+  return(
+      <nav>
+          NavBar
+          <NavLink exact to={"/"}>HOME</NavLink>
+          <NavLink to={"/about"}>ABOUT</NavLink>
+      </nav>
+  )
 }
-return (
-    <div className="NavBar">
 
-    <About/>
-    <Home/>
-
-    </div>
-)
-
-export default NavBar
+export default NavBar; 
