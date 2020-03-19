@@ -1,37 +1,41 @@
 import React, { useState } from "react";
 import { useInput } from '../Utilities/Input';
 import axios from 'axios'
-import API from '../secret'
+
 
 const Search = ()=>{
     const searchVideos = useInput("")
     const [videos, setVideos]=useState([]);
-    const getVideos = async()=>{
-        const userVideos = (``)
+    const getVideos = async(event)=>{
+        event.preventDefault()
+        const userVideos = (`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchVideos.value}&key=AIzaSyDxAZlUJS2gTxAAT_bjnNZykoltmmbODhk&order=relevance&type=video`)
+        
         try{
             let res = await axios.get(userVideos)
+            debugger
             setVideos(res.data)
         }catch(error){
             setVideos([])
         }
         }
     
-        // useEffect(()=>{
-        //     getVideos()
-           
-        // }, [])
+   
 
     return (
         <div className="Search">
+        <form className="searchBar" onSubmit={getVideos}>
+
             <label>
+            
           <input
             type="text"
             placeholder="Search Videos"
             {...searchVideos}
-        
-          />
-          <button className="searchButton" placeholder="SEARCH">SEARCH</button>
+            
+            />
+          <button  type="submit"className="searchButton" placeholder="SEARCH">SEARCH</button>
         </label>
+            </form>
         </div>
     )
 }
