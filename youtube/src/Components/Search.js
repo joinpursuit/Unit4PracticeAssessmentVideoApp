@@ -14,12 +14,19 @@ const Search = ()=>{
         try{
             let res = await axios.get(userVideos)
             debugger
-            setVideos(res.data)
+            setVideos(res.data.items)
         }catch(error){
             setVideos([])
+            console.log(error)
         }
         }
-    
+        // let displayVideos = searchVideos.map((vid) => {
+        //     return (
+        //       <div 
+        //       className="videosContainer" key={vid}>
+        //       </div>
+        //     );
+        //   });
    
 
     return (
@@ -37,6 +44,7 @@ const Search = ()=>{
           <button  type="submit"className="searchButton" placeholder="SEARCH">SEARCH</button>
         </label>
             </form>
+            {/* <div className="videoContainer">{displayVideos}</div> */}
         </div>
     )
 }

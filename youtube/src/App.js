@@ -12,15 +12,17 @@ function App() {
     <div className="App">
    YOUTUBE APP
     <NavBar/>
+   {/* <Switch>
+        <Route exact path={"/"}> */}
    
-  
     <HomePage/>
+  {/* </Route> */}
 
     <Home/>
   
     <About/>
     <Search/>
-   
+   {/* </Switch> */}
     </div>
   );
 }
