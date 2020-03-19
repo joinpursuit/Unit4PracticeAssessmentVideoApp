@@ -1,13 +1,15 @@
 import React from 'react';
-import { Route } from "react-router-dom"
-import NavBar from './components/General/NavBar';
+// import { Route } from "react-router-dom";
+import NavBar from './components/NavBar';
 import './App.css';
-// import '../components/CSS'
+
+
 
 function App() {
   return (
     <div className="App">
-      <switch>
+      <NavBar/>
+      {/* <switch>
       <Route exact path="/">
             <Home
               home={home}
@@ -16,8 +18,8 @@ function App() {
               // searchValue={searchValue}
               //  setSearchValue={setSearchValue}
             />
-          </Route>
-      </switch>
+          </Route> */}
+      {/* </switch> */}
     </div>
   );
 }
