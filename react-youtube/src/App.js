@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route,Switch} from "react-router-dom"
+import {Route,Switch,useParams} from "react-router-dom"
 import NavBar from "./components/NavBar"
 import Video from "./components/Video"
 import YouTubeAPI from "./components/YouTubeAPI.js"
@@ -15,7 +15,7 @@ function App() {
           <YouTubeAPI/>
         </Route>
         <Route path={"/video/:id"} >
-          <Video match={window.location.pathname}/>
+          <Video/>
         </Route>
       </Switch>
     </div>
