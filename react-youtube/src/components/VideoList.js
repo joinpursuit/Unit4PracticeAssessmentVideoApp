@@ -1,5 +1,4 @@
 import React from 'react'
-// import "../css/VideoList.css"
 
 const Video =({video,id})=> {
 

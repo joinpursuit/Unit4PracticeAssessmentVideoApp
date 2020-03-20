@@ -19,18 +19,27 @@ const Comment =()=> {
         return (
             <div className="commentSection">
             <form className="commentForm" onSubmit={handleSubmit}>
+            <div>
             <label>Name</label>
+            </div>
+            <div>
             <input placeholder="Name" required/>
-
+            </div>
+            <div>
             <label>Comment</label>
+            </div>
+            <div>
             <input placeholder="..." required/>
-
+            </div>
+            <div>
             <button type="Submit">Submit</button> 
-            </form>
-
+            </div>
             <div className="PostedComment">
             <History history={history}/>
             </div>
+
+            </form>
+            
             </div>
         )
     }

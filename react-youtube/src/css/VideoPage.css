@@ -2,8 +2,22 @@
     margin-top: 2%;
 }
 .commentSection{
-    border: solid black;
-    margin-top: 2%;
-    display: flex;
-    flex-direction: column;
+    /* border: solid black; */
+    width:660px;
+    display: inline-block;
+    text-align: start;
+}
+.commentSection > form > div > input{
+    width: 99%;
+}
+
+.commentSection > form > div > button{
+    color:white;
+    background-color:#3C7FFF;
+    height: 30px;
+    width: 60px;
+    border-radius: 5px;
+}
+.commentSection > form > div{
+    margin: 1%;
 }

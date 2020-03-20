@@ -26,6 +26,7 @@ const Video =()=> {
         opts={opts}
         onReady={onReady}
       />
+      <hr></hr>
       <Comment/>
       </>
     );
