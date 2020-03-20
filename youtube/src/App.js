@@ -11,7 +11,10 @@ function App() {
   return (
     <div className="App">
       YOUTUBE APP
+      <div className="nav">
+
     <NavBar />
+      </div>
       <Switch>
 
 
