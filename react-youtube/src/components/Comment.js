@@ -3,15 +3,11 @@ import History from "./History"
 
 
 const Comment =()=> {
-    const [name, setName]=useState("")
-    const [comment, setComment]=useState("")
     const [history, setHistory]=useState([])
     
     const handleSubmit=(e)=>{
         e.preventDefault()
         e.persist()
-        setName(e.target.elements[0].value)
-        setComment(e.target.elements[1].value)
         if(!history){
             setHistory({name : e.target.elements[0].value, comment:e.target.elements[1].value})
         }else{
@@ -19,7 +15,7 @@ const Comment =()=> {
         }
         }
         
-    console.log(name,comment,history)
+    console.log(history)
         return (
             <>
             <form className="commentForm" onSubmit={handleSubmit}>
