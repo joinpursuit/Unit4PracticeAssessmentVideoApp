@@ -16,6 +16,7 @@ const Search = () => {
                     className="videosContainer" key={vid.etag}>
                 
                         {vid.snippet.title}
+                      <img src={vid.snippet.thumbnails.high.url}id={vid.id.videoId}></img>
 
                 </div>
             );
