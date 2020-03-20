@@ -1,7 +1,7 @@
 nav{
     display: flex;
     flex-direction: row;
-    background-color: red;
+    background-color: #FA2200;
     color: white;
     justify-content: start;
     align-items:center;

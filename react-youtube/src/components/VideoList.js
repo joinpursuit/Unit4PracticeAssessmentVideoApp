@@ -8,10 +8,12 @@ const Video =({video,id})=> {
     }
 
     return (
-        <div className="video" videoID={id}>
-            <img src={video.thumbnails.medium.url} alt=" " onClick={(e)=>handleClick(id)}/> 
-            <p onClick={(e)=>handleClick(id)}>{video.title}</p>
-        </div>
+           
+            <div className="video" videoID={id}>
+                <img src={video.thumbnails.medium.url} alt=" " onClick={(e)=>handleClick(id)}/> 
+            <p className="videoTitle" onClick={(e)=>handleClick(id)}>{video.title}</p>
+            </div>
+            
         )
  
     }

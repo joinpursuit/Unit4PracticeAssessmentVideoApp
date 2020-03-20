@@ -3,6 +3,7 @@ import {useInput} from "../util/CustomHooks"
 import axios from "axios"
 import API_KEY from "../secrets"
 import Video from "./VideoList"
+import "../css/SearchBar.css"
 
 
 const SearchBar =()=> {
@@ -23,6 +24,15 @@ const SearchBar =()=> {
            console.log(error)
         }
     }
+    
+    const showMessage=()=>{
+        if(resultMessage){
+            return( <input value={resultMessage} className="message"/>
+            )
+        }else{
+            return null
+        }
+    }
 
     const ShowVideoList =videoList.map((video)=>{
            return(<><Video key={video.id.videoId} id={video.id.videoId} video={video.snippet}/></>)
@@ -37,8 +47,8 @@ const SearchBar =()=> {
                 <input name="search" {...searchObj} placeholder="Search Video"/>
                 <button type="submit">Search</button>
             </form>
+                {showMessage()}
             <div className="result">
-                {resultMessage}
                 {ShowVideoList}
             </div>
             </>
