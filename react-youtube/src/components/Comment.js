@@ -17,18 +17,21 @@ const Comment =()=> {
         
     console.log(history)
         return (
-            <>
+            <div className="commentSection">
             <form className="commentForm" onSubmit={handleSubmit}>
             <label>Name</label>
             <input placeholder="Name" required/>
+
             <label>Comment</label>
             <input placeholder="..." required/>
+
             <button type="Submit">Submit</button> 
             </form>
+
             <div className="PostedComment">
             <History history={history}/>
             </div>
-            </>
+            </div>
         )
     }
 

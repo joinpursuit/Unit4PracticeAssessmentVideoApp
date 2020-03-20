@@ -29,6 +29,9 @@
 }
 .videoTitle{
     font-size: 10px;
+    justify-self: flex-start;
+    font-size: small;
+    text-align: start;
 }
 .video>img{
     width: 100%;
