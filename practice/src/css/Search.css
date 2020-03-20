@@ -1,0 +1,40 @@
+.search {
+  margin: auto;
+  width: max-content;
+}
+
+.searchForm {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  width: max-content;
+  margin-top: 40px;
+
+  /* margin-left: 100%; */
+  justify-content: center;
+}
+
+.searchInput {
+  width: 500px;
+  padding: 10px;
+  border: solid grey 0.5px;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+.searchButton {
+  width: 100px;
+  color: white;
+  background-color: crimson;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.searchP {
+  background-color: lightgrey;
+  width: 600px;
+  padding: 10px;
+  margin-top: 55px;
+  border-radius: 3px;
+}
