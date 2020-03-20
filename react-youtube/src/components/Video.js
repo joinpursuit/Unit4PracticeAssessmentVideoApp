@@ -13,9 +13,9 @@ const Video =()=> {
         autoplay: 1
       }
     };
-    const _onReady=(event)=> {
-     event.target.mute();    
-      event.target.playVideo();
+    const onReady=(e)=> {
+      e.target.mute();    
+      e.target.playVideo();
     }
  
     return (
@@ -23,7 +23,7 @@ const Video =()=> {
       <YouTube
         videoId={id}
         opts={opts}
-        onReady={_onReady}
+        onReady={onReady}
       />
       <Comment />
       </>
