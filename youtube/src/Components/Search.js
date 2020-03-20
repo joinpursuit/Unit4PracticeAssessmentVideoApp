@@ -4,48 +4,60 @@ import axios from 'axios'
 import API from '../secret'
 
 
-const Search = ()=>{
+const Search = () => {
     const searchVideos = useInput("")
-    const [videos, setVideos]=useState([]);
-    const getVideos = async(event)=>{
+    const [videos, setVideos] = useState([]);
+
+    const displayVideos = () => {
+      return  videos.map(vid => {
+            return (
+                <div
+
+                    className="videosContainer" key={vid.etag}>
+                
+                        {vid.snippet.title}
+
+                </div>
+            );
+        })
+
+    }
+
+    const getVideos = async (event) => {
         event.preventDefault()
         const userVideos = (`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchVideos.value}&key=${API}&order=relevance&type=video`)
-        
-        try{
+
+        try {
             let res = await axios.get(userVideos)
-            debugger
+            // debugger
             setVideos(res.data.items)
-        }catch(error){
+        } catch (error) {
             setVideos([])
             console.log(error)
         }
-        }
-        // let displayVideos = searchVideos.map((vid) => {
-        //     return (
-        //       <div 
-        //       className="videosContainer" key={vid}>
-        //       </div>
-        //     );
-        //   });
-   
+    }
+
+
 
     return (
-        <div className="Search">
-        <form className="searchBar" onSubmit={getVideos}>
+        <>
+            <div className="Search">
+                <form className="searchBar" onSubmit={getVideos}>
 
-            <label>
-            
-          <input
-            type="text"
-            placeholder="Search Videos"
-            {...searchVideos}
-            
-            />
-          <button  type="submit"className="searchButton" placeholder="SEARCH">SEARCH</button>
-        </label>
-            </form>
-            {/* <div className="videoContainer">{displayVideos}</div> */}
-        </div>
+                    <label>
+
+                        <input
+                            type="text"
+                            placeholder="Search Videos"
+                            {...searchVideos}
+
+                        />
+                        <button type="submit" className="searchButton" placeholder="SEARCH">SEARCH</button>
+                    </label>
+                </form>
+                <div className="videoContainer">{displayVideos()}</div>
+            </div>
+        </>
     )
 }
 
