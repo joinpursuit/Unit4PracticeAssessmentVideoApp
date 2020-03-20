@@ -19,7 +19,7 @@ function App() {
           <Video/>
         </Route>
         <Route exact path={"/"}>
-          <Home/>
+          <Home />
         </Route>
         <Route path={"/about"}>
           <About/>
