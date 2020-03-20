@@ -4,6 +4,7 @@ import {Route,Switch,useParams} from "react-router-dom"
 import NavBar from "./components/NavBar"
 import Video from "./components/Video"
 import YouTubeAPI from "./components/YouTubeAPI.js"
+import About from "./components/About"
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
         </Route>
         <Route path={"/video/:id"} >
           <Video/>
+        </Route>
+        <Route path={"/about"} >
+          <About/>
         </Route>
       </Switch>
     </div>
