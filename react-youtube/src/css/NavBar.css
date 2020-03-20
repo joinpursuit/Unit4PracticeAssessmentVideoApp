@@ -1,0 +1,20 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    color: white;
+    justify-content: start;
+    align-items:center;
+    height: 50px;
+}
+.inactive{
+    color: #fff;
+    flex-grow: 0.05
+
+}
+.active{
+    color:black
+}
+nav>h1{
+    flex-grow: 0.1
+}
