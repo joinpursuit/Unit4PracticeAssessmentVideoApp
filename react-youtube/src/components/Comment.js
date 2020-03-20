@@ -6,19 +6,19 @@ const Comment =()=> {
     const [name, setName]=useState("")
     const [comment, setComment]=useState("")
     const [history, setHistory]=useState([])
-
+    
     const handleSubmit=(e)=>{
         e.preventDefault()
         e.persist()
         setName(e.target.elements[0].value)
         setComment(e.target.elements[1].value)
         if(!history){
-            setHistory(e.target.elements[0].value)
+            setHistory({name : e.target.elements[0].value, comment:e.target.elements[1].value})
         }else{
-            setHistory(history=>[...history,e.target.elements[0].value])
+            setHistory(history=>[...history,{name : e.target.elements[0].value, comment: e.target.elements[1].value}])
         }
-    }
-
+        }
+        
     console.log(name,comment,history)
         return (
             <>
