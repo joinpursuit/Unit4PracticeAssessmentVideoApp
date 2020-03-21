@@ -24,9 +24,7 @@ const ShowVideo = () => {
         <div>
             <YouTube
                 videoId={videoId}
-        // opts={opts}
-        // onReady={this._onReady}
-        />
+   />
 ​
       <form onSubmit={e => {
           e.preventDefault();
