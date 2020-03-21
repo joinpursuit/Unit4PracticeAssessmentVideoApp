@@ -38,8 +38,8 @@ const Home = () => {
                 <input type="submit" value="Search" className="button"/>
             </form>
             <div className="results">
-            {/* {searchResults === "" ? <p className="noSearch">No Search Results Yet!, Please Submit A Search Above</p> : {ShowResults}} */}
             {ShowResults}
+            {searchResults.length ? ShowResults : <p className="noSearch">No Search Results Yet!, Please Submit A Search Above</p>}
             </div>
         </div>
     )
