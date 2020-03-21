@@ -11,14 +11,18 @@ function App() {
 
       <Switch>
 
-
             <Route exact path={'/'}>
                 <Home />
             </Route>
 
+            {/* <Route path={'/video/:id'}>
+              <VideoPage />
+            </Route> */}
+
             <Route exact path={'/about'}>
                 <About />
             </Route>
+
 
 
       </Switch>
