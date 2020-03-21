@@ -3,15 +3,15 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return(
+
       <>
-      <nav>
-          YouTube
-          <NavLink exact to={"/"}>HOMEPAGE</NavLink>
-          <NavLink to={"/about"}>ABOUT</NavLink>
-          <NavLink to={"/home"}>HOME</NavLink>
-          <NavLink to={"/video/:id"}>VIDEO</NavLink>
-      </nav>
-      </>
+            <nav>
+                YouTube
+                <NavLink exact to={"/"}>Home</NavLink>
+                <NavLink to={"/about"}>About</NavLink>
+            </nav>
+            </>
+    
   )
 }
 

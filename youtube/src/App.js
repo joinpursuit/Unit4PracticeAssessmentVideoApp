@@ -12,29 +12,19 @@ function App() {
   return (
     <div className="App">
       YOUTUBE APP
-      <div className="nav">
+     
 
-    <NavBar />
-      </div>
+      <NavBar/>
       <Switch>
-
-
-        <Search />
-
-        <Route path={"/"}>
-          <Home />
+        <Route exact path={"/"}>
+          <Search/>
         </Route>
-
-        <Route path={"/about"}>
-          <About />
-        </Route>
-        <Route path={"/video/:id"} >
+        {/* <Route path={"/video/:id"} >
           <Video/>
+        </Route> */}
+        <Route path={"/about"} >
+          <About/>
         </Route>
-        <Route path={"/search"}>
-          <HomePage />
-        </Route>
-        
       </Switch>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-
+import './About.css'
 
 const About = ()=>{
 
