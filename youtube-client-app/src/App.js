@@ -9,21 +9,20 @@ import Home from './Components/Home'
 
 const YouTubeApp = () => {
     
- 
-    return (
-    
-      <>
-      <NavBar />
-      <Switch>
-      <Route path={"./Components/Home"} >
-          <Home/>
-      </Route>
-      <Route path={"./Components/AboutUs"}>
-          <AboutUs />
-      </Route>
 
-      </Switch>
-      </>
+    return (
+        <>
+            <NavBar />
+            <Switch>
+            <Route path={"/Home"} >
+                <Home/>
+            </Route>
+            <Route path={"/AboutUs"}>
+                <AboutUs />
+            </Route>
+
+            </Switch>
+        </>
     )
 
 }
