@@ -1,9 +1,9 @@
-import React from 'react';
-import NavBar from "./Components/NavBar";
+import React from "react";
+import NavBar from "./components/NavBar";
 import { Route, Switch } from "react-router-dom";
-import Home from "./Components/Home";
-import Video from "./Components/Video";
-import About from "./Components/About";
+import Home from "./components/Home";
+import Video from "./components/Video";
+import About from "./components/About";
 
 function App() {
   return (
@@ -16,12 +16,10 @@ function App() {
         <Route path={"/video/:id"}>
           <Video />
         </Route>
-        <Route path={"/about"}> 
+        <Route path={"/about"}>
           <About />
         </Route>
       </Switch>
-
-      
     </div>
   );
 }

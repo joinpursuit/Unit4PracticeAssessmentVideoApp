@@ -43,6 +43,7 @@ const Video = () => {
             required
           />
         </label>
+        <br></br>
         <label>
           Comment:
           <input
@@ -53,6 +54,7 @@ const Video = () => {
             required
           />
         </label>
+        <br></br>
         <button type="submit">Submit</button>
       </form>
       {/* render the contents of the `comments` array */}
