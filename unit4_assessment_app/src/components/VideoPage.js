@@ -20,6 +20,7 @@ const VideoPage = () => {
   return (
     <div>
       <Youtube videoId={id} opts={opts} onReady={_onReady} />
+      <hr></hr>
       <Comments />
     </div>
   );
