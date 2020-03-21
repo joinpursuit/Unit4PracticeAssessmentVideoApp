@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoPage from './components/VideoPage'
 import NavBar from '../src/components/NavBar.js'
 import Home from './components/Hompage';
 import About from './components/About'
@@ -15,9 +16,9 @@ function App() {
                 <Home />
             </Route>
 
-            {/* <Route path={'/video/:id'}>
+            <Route path={'/video/:id'}>
               <VideoPage />
-            </Route> */}
+            </Route>
 
             <Route exact path={'/about'}>
                 <About />

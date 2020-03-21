@@ -9,7 +9,7 @@ const Results = ({videos, handleClick}) =>{
                 id={video.id.videoId}
                 onclick={e => {handleClick(e)}}>
                 </img>
-                <h3>{video.snippet.title}</h3>
+                <h4>{video.snippet.title}</h4>
             </div>
         )
     });
