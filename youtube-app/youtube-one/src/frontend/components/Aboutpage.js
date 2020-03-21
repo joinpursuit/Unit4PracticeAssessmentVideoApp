@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 
 const Aboutpage = () => {
     return (
-        <Navbar/>
+        <div>About Page</div>
     )
 }
 
