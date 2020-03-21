@@ -30,13 +30,13 @@ const Home = () =>{
             });
                 setVideos(res.data.items)
         }catch(err){
-            console.log(error)
+            console.log(err)
         }
     }
 
     const handleClick = (e) =>{
         e.preventDefault();
-        searchHistoty.push(`video/${e.target.id}`)
+        searchHistory.push(`video/${e.target.id}`)
     }
 
     return(

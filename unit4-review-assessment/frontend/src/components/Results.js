@@ -4,12 +4,12 @@ const Results = ({videos, handleClick}) =>{
     let show = videos.map(video =>{
         return(
             <div>
-                <img
-                src={video.snippet}
-                id={video}
+                <img alt='videoImg'
+                src={video.snippet.thumbnails.high.url}
+                id={video.id.videoId}
                 onclick={e => {handleClick(e)}}>
                 </img>
-                <h3>{video}</h3>
+                <h3>{video.snippet.title}</h3>
             </div>
         )
     });

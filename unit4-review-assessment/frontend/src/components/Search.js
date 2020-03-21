@@ -1,14 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-
-function Search() {
-    
+const Search = ({handleSubmit, searchObjInput}) => {
     return (
-        <div>
-            
-        </div>
+
+        <form
+        className="searchForm"
+        onSubmit={e =>{
+            handleSubmit(e)
+        }}>
+            <input id="searchInput"
+            type='text'
+            {...searchObjInput} placeholder="What is on your mind"/>
+
+            <button id="searchBttn" type="submit">Search</button>
+        </form>
+
     )
 }
 
-export default Search
+export default Search;

@@ -23,6 +23,10 @@ function App() {
                 <About />
             </Route>
 
+            <Route path='/youtube' component={()=>{
+              window.location = 'https://youtube.com';
+              return null;
+            }} />
 
 
       </Switch>
