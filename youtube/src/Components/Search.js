@@ -26,7 +26,7 @@ const Search = () => {
 
     const getVideos = async (event) => {
         event.preventDefault()
-        const userVideos = (`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=${searchVideos.value}&key=${API}&order=relevance&type=video`)
+        const userVideos = (`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q=${searchVideos.value}&key=${API}&order=relevance&type=video`)
 
         try {
             let res = await axios.get(userVideos)

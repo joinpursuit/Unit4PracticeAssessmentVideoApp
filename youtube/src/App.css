@@ -60,3 +60,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, small {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+  .About{
+    text-align: center;
+    color:black;
+  }
