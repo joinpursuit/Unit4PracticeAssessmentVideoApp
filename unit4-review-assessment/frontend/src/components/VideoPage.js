@@ -7,7 +7,7 @@ const VideoPage = () =>{
 
     const { id } = useParams();
 
-    const style = {
+    const opts = {
         height: '300',
         width: '400',
         playerVars: {
@@ -15,10 +15,14 @@ const VideoPage = () =>{
         }
     }
 
+    const _onReady = (e) => {
+        // access to player in all event handlers via event.target
+        e.target.pauseVideo();
+      }
 
     return(
         <div>
-            <YouTube />
+            <YouTube videoId={id} opts={opts} onReady={_onReady} />
         </div>
     )
     
