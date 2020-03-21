@@ -1,0 +1,39 @@
+.searchBar{
+    margin-top: 2%;
+}
+.searchBar>input{
+    width: 60%;
+}
+
+.searchBar>button{
+    width: 15%;
+    background-color: #DC3545;
+    color: white;
+}
+
+.message{
+    margin-top: 2%;
+    background-color: #D6D8D9;
+    width: 70%;
+    padding: 15px;
+   font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.result{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-gap: 5%;
+    margin: 5%;
+    margin-left: 12%;
+}
+.videoTitle{
+    font-size: 10px;
+    justify-self: flex-start;
+    font-size: small;
+    text-align: start;
+}
+.video>img{
+    width: 100%;
+    height: 80%;
+}
