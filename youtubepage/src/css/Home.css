@@ -1,4 +1,4 @@
-form {
+.searchForm {
     height: 10vh;
     display: flex;
     margin-top: 3%;
@@ -33,11 +33,11 @@ form {
     cursor: pointer;
 }
 
-img:hover{
+.play:hover{
     cursor: pointer;
 }
 
-h3:hover{
+.videoTitle:hover{
     cursor: pointer;
 }
 
@@ -49,12 +49,12 @@ h3:hover{
     margin-left: 11%;
 }
 
-img{
+.play{
     height: auto;
     width: 80%;
 }
 
-h3{
+.videoTitle{
     width: 80%;
     margin-left: 10%;
     color: black;
@@ -72,4 +72,13 @@ a:hover {
     width: 50%;
     display: flex;
     flex-direction: column;
+}
+
+.noSearch{
+    display: flex;
+    align-items: center;
+    background-color: lightgrey;
+    width: 70vw;
+    height: 5vh;
+    border-radius: 5px;
 }

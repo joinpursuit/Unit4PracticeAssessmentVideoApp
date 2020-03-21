@@ -24,8 +24,8 @@ const Home = () => {
         return (
             <div key={index} className="video">
                 <Link to={to} id={video.id.videoId}>
-                    <img src={video.snippet.thumbnails.high.url}alt=""/>
-                    <h3>{video.snippet.title}</h3>
+                    <img src={video.snippet.thumbnails.high.url} alt="" className="play"/>
+                    <h3 className="videoTitle">{video.snippet.title}</h3>
                 </Link>
             </div>
         ) 
@@ -33,12 +33,13 @@ const Home = () => {
 
     return(
         <div>
-            <form onClick={handleSubmit}>
+            <form className="searchForm" onClick={handleSubmit}>
                 <input type="text" placeholder="Search..." className="search" {...searchTerm}/>
                 <input type="submit" value="Search" className="button"/>
             </form>
             <div className="results">
-                {ShowResults}
+            {/* {searchResults === "" ? <p className="noSearch">No Search Results Yet!, Please Submit A Search Above</p> : {ShowResults}} */}
+            {ShowResults}
             </div>
         </div>
     )
