@@ -2,19 +2,19 @@ import React from "react";
 
 import { NavLink } from "react-router-dom";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
     <nav>
       <NavLink to={"/video"} className="logo">
         YouTube
       </NavLink>
-      <NavLink exact to={"/"} className="navAnchor">
+      <NavLink exact to={"/"} className="navRight">
         Home
       </NavLink>
-      <NavLink to={"/about"} className="navAnchor">
+      <NavLink to={"/about"} className="navRight">
         About
       </NavLink>
     </nav>
   );
 };
-export default NavBar;
+export default Navbar;
