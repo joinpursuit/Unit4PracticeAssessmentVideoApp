@@ -1,29 +1,47 @@
 import React, { useState, useEffect } from 'react';
+import Return from './Return';
 import axios from 'axios';
+
 
 const Home = () => {
     const [search, setSearch] = useState("");
+    const [thumbnails, setThumbnails] = useState();
 
-    const fetchData= async(url, setData)=>{
-        let res = await axios.get(url)
+    const handleSearch = async (e) => {
+        e.preventDefault() 
+        // sessionStorage.searchTerm = e.target.elements[0].value
+        // setSearch(sessionStorage.searchTerm);
+        setSearch(e.target[0].value);
         try {
-            res.data.payload.map((el) => {
-                return setData(prevState => [...prevState, el.tag_name])
+        let res = await axios.get(`https://www.googleapis.com/youtube/v3/search/`, 
+            {
+                params: {
+                    part: 'snippet',
+                    maxResults: 8,
+                    key: 'AIzaSyD7UxKzpzlDzL6mhSZCPaepBzhXG1hQWnk',
+                    type: 'video',
+                    q: e.target[0].value
+                    // q: search
+                }
             });
+
+        console.log(res);
+        debugger;
+
+        res.data.items.map((el) => {
+            setThumbnails(el.snippet.thumbnails.default.url);
+            console.log(thumbnails);
+            debugger;
+        });
+
+        
+            // res.data.payload.map((el) => {
+            //     return setSearch(prevState => [...prevState, el.tag_name])
+            // });
         } catch (error) {
             console.log(error)
         }
     };
-
-    const handleSearch = (e) => {
-        e.preventDefault() 
-        window.location="../home"
-        sessionStorage.searchTerm=e.target.elements[0].value
-    };
-
-    useEffect(()=>{
-        fetchData("https://www.googleapis.com/youtube/v3/search", setSearch)
-    }, [])
 
     return(
         <div className="homeDiv">
@@ -33,6 +51,7 @@ const Home = () => {
             </form>
             <div className="resultsDiv">
                 <p>No Search Results. Search for videos above!</p>
+                <Return videos={thumbnails}/>
             </div>
         </div>
     );
