@@ -48,7 +48,7 @@ class Home extends React.Component {
               required
             />
             <br></br>
-            <button type="submit" className="submitBtn">
+            <button type="submit" className="searchBtn">
               Search
             </button>
           </form>

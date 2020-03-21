@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
+import "../css/Video.css";
 
 const Video = () => {
   const [name, setName] = useState("");
@@ -31,43 +32,47 @@ const Video = () => {
   console.log(videoInfo);
   return (
     <>
-      <YouTube videoId={id} />
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            required
-          />
-        </label>
-        <br></br>
-        <label>
-          Comment:
-          <input
-            type="text"
-            name="comment"
-            value={comment}
-            onChange={e => setComment(e.target.value)}
-            required
-          />
-        </label>
-        <br></br>
-        <button type="submit">Submit</button>
-      </form>
-      {/* render the contents of the `comments` array */}
-      <div>
-        {videoInfo.map(comment => {
-          return (
-            <div key={comment.timeStamp}>
-              <p>{comment.name}</p>
-              <p>{comment.comment}</p>
-              <p>{comment.timeStamp}</p>
-            </div>
-          );
-        })}
+      <div className="videoContainer">
+        <YouTube videoId={id} />
+        <form onSubmit={handleSubmit}>
+          <label className="labels">
+            Name
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={e => setName(e.target.value)}
+              required
+            />
+          </label>
+          <br></br>
+          <label className="labels">
+            Comment
+            <input
+              type="text"
+              name="comment"
+              value={comment}
+              onChange={e => setComment(e.target.value)}
+              required
+            />
+          </label>
+          <br></br>
+          <button type="submit" className="submitBtn">
+            Submit
+          </button>
+        </form>
+        {/* render the contents of the `comments` array */}
+        <div className="videoComments">
+          {videoInfo.map(comment => {
+            return (
+              <div key={comment.timeStamp}>
+                <p>{comment.name}:</p>
+                <p>{comment.comment}</p>
+                <p>{comment.timeStamp}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </>
   );
