@@ -1,0 +1,14 @@
+.About {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-self: center;
+  width: 30%;
+  padding: 50px;
+  margin: auto;
+}
+
+h4 {
+  font-size: 25px;
+  font-weight: bold;
+}

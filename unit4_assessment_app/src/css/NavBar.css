@@ -10,10 +10,17 @@ nav {
   background: #c4302b;
   justify-items: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 a {
+  font-size: 24px;
   color: white;
+  text-decoration-line: none;
+}
+
+a:hover {
+  color: blue;
   text-decoration-line: none;
 }
 

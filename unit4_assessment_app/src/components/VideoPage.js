@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Youtube from "react-youtube";
+import CommentForm from "./CommentForm";
 
 const VideoPage = () => {
   const { id } = useParams();
@@ -18,6 +19,7 @@ const VideoPage = () => {
   return (
     <div>
       <Youtube videoId={id} opts={opts} onReady={_onReady} />
+      <CommentForm />
     </div>
   );
 };
