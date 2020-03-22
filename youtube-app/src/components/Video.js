@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import YouTube from 'react-youtube';
 import { useParams } from "react-router-dom";
+import '../css/Video.css'
 
 const ShowVideo = () => {
     let {id} = useParams();
@@ -21,7 +22,8 @@ const ShowVideo = () => {
     }
 
     return(
-        <div>
+        <div className="display"
+        >
             <YouTube
                 videoId={id}
         />
@@ -29,13 +31,13 @@ const ShowVideo = () => {
       <form onSubmit={e => {
           e.preventDefault();
           handleSubmit();
-        }}>
+        }} className="displayComment">
         <label>
-            Name:
-        <input type="text" name="name" value={name} onChange={nameHandle}/>
+            Name: 
+        <input type="text" name="name" value={name} onChange={nameHandle} className="name"/>
         </label>
         <label>
-            Comment:
+            Comment: 
         <input type="text" name="comment" value={comment} onChange={commentChange}/>
         </label>
         <input type="submit" value="Submit"/>
