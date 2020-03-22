@@ -1,0 +1,13 @@
+.videoThumb{
+  display: flex;
+  align-self: center;
+  padding-left: 36%;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-top: 58px;
+}
+ .title{
+  padding-top: 5%;
+  font-size: 38px;
+  color: red;
+ }
