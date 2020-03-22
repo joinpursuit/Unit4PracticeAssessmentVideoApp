@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import axios from 'axios';
-import API_KEY from '../secrets'
-import Thumbnails from './Thumbnails'
+import API_KEY from '../secrets';
+import Thumbnails from './Thumbnails';
+import '../css/Home.css';
 
 const Home = () => {
   const [search, setSearch] = useState('');
@@ -23,7 +24,7 @@ const Home = () => {
     errorDiv = <div><div onClick={() => setError('')}> (X) </div> Sorry, something went wrong </div>
   }
 
-  let results = `No Search Results. Search for videos above!`
+  let results = <p className="results">No Search Results. Search for videos above!</p>
   if (searchResult.length) {
     results = searchResult.map((result) => <div key={result.id.videoId}><Thumbnails video={result}/></div>)
   }
