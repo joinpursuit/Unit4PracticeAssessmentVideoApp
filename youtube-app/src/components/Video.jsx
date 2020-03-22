@@ -1,29 +1,29 @@
 import React, {useState} from "react"
 import YouTube from 'react-youtube';
-import { useParams } from "react-router-dom";
-​
+import { useParams } from 'react-router-dom';
+
 const ShowVideo = () => {
-    let {videoId} = useParams();
+    let { id } = useParams();
    const [name, setName] = useState();
    const [comment, setComment] = useState();
    const [userPosts, setUserPosts] = useState([]);
-    const nameHandle= (e) => {
+    const nameHandle = (e) => {
         setName(e.target.value)
     }
     const commentChange= (e) => {
         setComment(e.target.value) 
     }
-​
+
     const handleSubmit = () => {
         setUserPosts([{name, comment}, ...userPosts]);
         setName("");
         setComment("");
     }
-​
+
     return(
         <div>
             <YouTube
-                videoId={videoId}
+                videoId={id}
    />
 ​
       <form onSubmit={e => {
@@ -42,7 +42,7 @@ const ShowVideo = () => {
         </form>
         {userPosts.map(post=> {
             return(
-                <div>
+                <div key={post.name+post.comment}>
                     {post.name}
                     {post.comment}
                 </div>
