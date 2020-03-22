@@ -3,7 +3,7 @@ import YouTube from 'react-youtube';
 import { useParams } from "react-router-dom";
 
 const ShowVideo = () => {
-    let {videoId} = useParams();
+    let {id} = useParams();
    const [name, setName] = useState();
    const [comment, setComment] = useState();
    const [userPosts, setUserPosts] = useState([]);
@@ -23,9 +23,7 @@ const ShowVideo = () => {
     return(
         <div>
             <YouTube
-                videoId={videoId}
-        // opts={opts}
-        // onReady={this._onReady}
+                videoId={id}
         />
 
       <form onSubmit={e => {
