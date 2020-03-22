@@ -1,18 +1,28 @@
 import React from "react"
-import axios from "axios"
-import { useInputs } from "../utility/InputHooks";
+import "../css/thumbnail.css"
+import { Link } from "react-router-dom"
 
-const Youtube=({})=>{
+
+const Youtube=({videos})=>{
+
+  const displayResults = videos.map(video=>{
+    // debugger
+    return(
+      <div className="thumbnail" key={video.id.videoId} >
+      <Link to ={`/video/${video.id.videoId}`}><img src={video.snippet.thumbnails.default.url} ></img></Link> 
+       <h3>{video.snippet.title}</h3>
+      </div>
+    )
+})
+
+return(
+  <>
+  {displayResults}
+  </>
+)
 }
-    const searchByKeyword = ()=> {
-        let results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
-      
-        for(var i in results.items) {
-          var item = results.items[i];
-          Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
-        }
-      }
 
 
+   
 
  export default Youtube;

@@ -2,13 +2,17 @@ import React, {useEffect, useState} from "react";
 import axios from "axios"
 import SearchBar from "./helper/searchBar"
 import NavBar from './NavBar';
-import VideoDetail from './VideoDetail';
+import Youtube from './helper/youtube';
+import NoResult from './NoResult';
+
+import "./css/video.css"
 
 
 
 const Home = () => {
 
     const [videos, setVideos ] = useState([])
+    const [results, setResults ] = useState([false])
    const findYoutubeVid = async (search="") =>{
         try{
             let res = await axios.get("https://www.googleapis.com/youtube/v3/search", 
@@ -20,33 +24,39 @@ const Home = () => {
             }
         })
             
-            debugger
+            // debugger
             let videoArr = res.data.items
-            if(videoArr.length === 0 ){
-                setVideos([{
-                    snippet: {title:"No results found"}}])
+            if(search === "" ){
+               setResults(true)
             } else{
-
+                // 
                 setVideos(videoArr)
+                
             }
             
         }catch(err){
             console.log(err)
             setVideos([])
+
         }
     }
+
+    useEffect(()=>{
+        findYoutubeVid()
+        // setResults(false)
+    },[])
 
 
 
     return (
-      <div className="Mainpage">
+      <>
       <NavBar/>
-   
-
-    <SearchBar findYoutubeVid ={findYoutubeVid} />
-    <p>Home</p>
-    <VideoDetail videos={videos}/>
-      </div>
+        <SearchBar findYoutubeVid ={findYoutubeVid} />
+       <NoResult results = {results}/>
+    <div className="Mainpage">
+        <Youtube videos={videos}/>
+    </div>
+      </>
     );
   }
   

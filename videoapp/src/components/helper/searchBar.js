@@ -7,7 +7,7 @@ const SearchBar=({findYoutubeVid})=>{
         e.preventDefault()
         console.log(youtubesearch)
         findYoutubeVid(youtubesearch.value)
-        debugger
+        
     }
 
     return(
