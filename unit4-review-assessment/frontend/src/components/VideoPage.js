@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import YouTube from 'react-youtube' 
+import YouTube from 'react-youtube';
 
 
 const VideoPage = () =>{
@@ -13,7 +13,7 @@ const VideoPage = () =>{
         playerVars: {
             autoplay: 1
         }
-    }
+    };
 
     const _onReady = (e) => {
         // access to player in all event handlers via event.target
@@ -26,6 +26,7 @@ const VideoPage = () =>{
         </div>
     )
     
-}
+};
+
 
 export default VideoPage;
