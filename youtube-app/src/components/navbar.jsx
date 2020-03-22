@@ -5,9 +5,9 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav>
-      <NavLink to={"/video"} className="logo">
+      <h1 className="logo">
         YouTube
-      </NavLink>
+      </h1>
       <NavLink exact to={"/"} className="navRight">
         Home
       </NavLink>
