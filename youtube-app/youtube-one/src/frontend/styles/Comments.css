@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+}
+
+.comments-section {
+    margin-top: 5%;
+    margin-left: 60%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input {
+    height: 20px;
+    width: 500px;
+    border: solid black;
+    border-width: 1px;
+}

@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="navbar">
             <nav className="navigation">
             <div></div>
-            <div className="navbar-logo">Youtube</div>
+            <div className="navbar-logo">Youtube.noob</div>
             <div className="spacing-between"></div>
             <div className="navigation-items">
                 <ul>

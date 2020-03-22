@@ -14,7 +14,7 @@ function App() {
           <Route path={"/About"}>
             <Aboutpage/>
           </Route>
-          <Route path={"/Video"}>
+          <Route path={"/Video/:id"}>
             <Videopage/>
           </Route>
           <Route path={"/"}>
