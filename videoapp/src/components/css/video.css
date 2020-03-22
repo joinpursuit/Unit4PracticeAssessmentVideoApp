@@ -1,0 +1,9 @@
+.Mainpage{
+    display:flex ;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(223, 222, 222);
+    justify-content: space-evenly;
+    width: 70%;
+   margin-left: 15%;
+}
