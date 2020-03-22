@@ -1,6 +1,6 @@
 nav {
   background-color: #F92100;
-  width: 110%;
+  width: 100%;
   position: sticky;
   top: 0;
   display: flex;
@@ -16,7 +16,7 @@ nav {
 
 .navLogo {
   height: 55px;
-  width: 150px;
+  width: 100px;
   margin-left:60px;
   margin-top: 12px;
 }
@@ -27,8 +27,8 @@ nav {
   align-items: center;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-right: 60px;
-  font-size: 25px;
+  margin-right: 10px;
+  font-size: 20px;
 }
 
 .divForm {
@@ -36,6 +36,7 @@ nav {
   margin-top: 60px;
   justify-content: center;
   width: 133%;
+  margin: 20px;
 }
 
 .search {

@@ -6,10 +6,6 @@ import Home from './components/Home';
 import Video from './components/Video';
 import About from './components/About';
 
-// react router docs
-// https://reacttraining.com/react-router/web/example/url-params
-
-// http://sihamesproject.com/video/Xyase23
 function App() {
   return (
     <div className="App">
@@ -25,8 +21,6 @@ function App() {
           <About/>
         </Route>
       </Switch>
-     
-    
     </div>
   );
 }

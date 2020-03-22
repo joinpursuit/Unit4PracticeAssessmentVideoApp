@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 import axios from 'axios';
-import API_KEY from '../secrets'
+import API_KEY from '../secrets';
+import Thumbnails from './Thumbnails'
+
 
 const Home = () => {
   const [search, setSearch] = useState('');
   const [searchResult, setSearchResult] = useState([]);
   const [error, setError] = useState('');
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,9 +26,9 @@ const Home = () => {
     errorDiv = <div><div onClick={() => setError('')}> (X) </div> Sorry, something went wrong </div>
   }
 
-  let result = `No Search Results. Search for videos above!`
+  let results = `No Search Results. Search for videos above!`
   if (searchResult.length) {
-    result = searchResult.map((video, index) => <div key={index}>index</div>)
+    results = searchResult.map((result) => <div key={result.id.videoId}>Thumbnails video={result}/></div>)
   }
 
   return(
@@ -36,11 +37,11 @@ const Home = () => {
         <label>Search 
           <input type="text" value={search} onChange={(e) => setSearch(e.target.value)}/>
         </label>
-        <button>Submit</button>
-        <input type="submit" value="Submit2" />
+       
+        <input type="submit" value="Submit"/>
       </form>
       {errorDiv}
-      {result}
+      {results}
     </div>
   )
 }

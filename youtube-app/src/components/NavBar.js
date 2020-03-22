@@ -4,13 +4,11 @@ import '../css/NavBar.css'
 
 const NavBar = () => {
   return(
-    
-    <nav>
+    <nav className="divForm">
       <NavLink to={"/video"} className="navLogo">Youtube</NavLink>
-      <NavLink exact to={"/"} className="navAnchor">Home</NavLink>
-      <NavLink to={"/about"} className="navAnchor">About</NavLink>
-    </nav>
-       
+      <NavLink exact to={"/"} className="navRight">Home</NavLink>
+      <NavLink to={"/about"} className="navRight">About</NavLink>
+    </nav>   
   )
 }
 export default NavBar;
