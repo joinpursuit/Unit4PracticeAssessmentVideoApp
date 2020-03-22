@@ -1,0 +1,36 @@
+#searchInput {
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid black;
+  font-size: 15px;
+  font-weight: bold;
+  width: 60%;
+  box-shadow: 5px 5px grey;
+}
+
+#searchBtn {
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 15px;
+  box-shadow: 5px 5px grey;
+}
+
+.displayResults {
+  display: grid;
+  grid-template-columns: repeat(2, 0.1fr);
+  justify-content: center;
+  grid-gap: 50px;
+}
+
+.resultItem {
+  border: 15px;
+}
+
+.thumbnail:hover {
+  box-shadow: 10px 10px lightblue;
+}
+
+form {
+  margin: 50px;
+}

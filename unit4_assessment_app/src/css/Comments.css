@@ -1,0 +1,33 @@
+#commentForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  margin: auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.commentInput {
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid black;
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 5px 5px grey;
+  margin-bottom: 10px;
+}
+
+#submitCommentBtn {
+  display: flex;
+  align-self: center;
+  margin: 10px;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  background: lightskyblue;
+  color: white;
+  box-shadow: 5px 5px grey;
+}
