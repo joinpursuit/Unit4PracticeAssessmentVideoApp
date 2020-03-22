@@ -1,0 +1,12 @@
+div {
+   text-align: center;
+}
+
+p {
+   color: white;
+    background: #635457;
+    border: solid 3px yellow;
+    width: 35%;
+    text-align: center;
+    margin-left: 35%;
+}

@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: pink;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  border-style: inset;
+}
+
+.navRight {
+  width: 50%;
+  justify-content: space-evenly;
+  font-size: 20px;
+}
+
+​h1 {
+  margin: 0;
+  font-size: 20px;
+  color: darkblue;
+  padding-right: 40px
+}
+
