@@ -5,7 +5,7 @@ import '../css/NavBar.css'
 const NavBar = () => {
   return(
     <nav className="divForm">
-      <NavLink to={"/video"} className="navLogo">Youtube</NavLink>
+      <h2 className="navLogo">Youtube</h2>
       <NavLink exact to={"/"} className="navRight">Home</NavLink>
       <NavLink to={"/about"} className="navRight">About</NavLink>
     </nav>   
