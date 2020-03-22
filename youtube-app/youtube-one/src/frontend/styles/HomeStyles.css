@@ -1,0 +1,21 @@
+button {
+    display: grid;
+    position: fixed;
+    top: 11.8%;
+    left: 60%;
+    background-color: red;
+    color: white;
+    height: 27px;
+    width: 70px;
+}
+
+.search {
+    display: grid;
+    position: fixed;
+    top: 12%;
+    left: 25%;
+    height: 20px;
+    width: 500px;
+    border: solid grey;
+    border-width: 1px;
+}
