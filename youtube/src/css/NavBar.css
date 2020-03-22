@@ -1,0 +1,25 @@
+.navBar {
+  background: red;
+  color: white;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo nav";
+}
+
+.logo {
+  grid-area: logo;
+  font-size: 65px;
+  color: ivory;
+}
+
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: left;
+  padding-top: 25px;
+  font-size: 30px;
+  font-family: Cambria;
+}

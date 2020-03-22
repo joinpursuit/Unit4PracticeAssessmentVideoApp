@@ -1,0 +1,28 @@
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  font-family: Cambria;
+}
+
+.labels {
+  font-size: 30px;
+}
+
+input {
+  border-radius: 15px;
+}
+
+.submitBtn {
+  margin-top: 20px;
+  font-size: 20px;
+  color: ivory;
+  background-color: red;
+  border-radius: 20px;
+}
+
+.videoComments {
+  font-size: 30px;
+}
