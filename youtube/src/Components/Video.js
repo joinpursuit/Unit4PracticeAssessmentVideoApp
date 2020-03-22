@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import YouTube from "react-youtube";
 import "../css/Video.css";
+// import axios from "axios";
+// import API_KEY from "../secrets";
 
 const Video = () => {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
+  // const [video, setVideo] = useState("");
   const [videoInfo, setVideoInfo] = useState([]);
-  let { id } = useParams();
+  const { id } = useParams();
   // 👆 populated by the route/url
 
   //   const handleName = e => {
@@ -17,6 +20,24 @@ const Video = () => {
   //   const handleComment = e => {
   //     setComment(e.target.value);
   //   };
+
+  // const getVideoInfo = async () => {
+  //   try {
+  //     let res = await axios.get(
+  //       `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${API_KEY}&part=snippet`
+  //     );
+  //     // debugger;
+  //     let video = res.data.items[0].snippet.thumbnails.high.url;
+  //     // let id = video.id;
+  //     console.log(res);
+  //     // setVideo(video);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+  // useEffect(() => {
+  //   getVideoInfo();
+  // }, [id]); //the dependency array
 
   const handleSubmit = e => {
     e.preventDefault();
