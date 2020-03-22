@@ -11,12 +11,10 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('SUBMIT')
     try {
       const { data } = await axios.get(`https://www.googleapis.com/youtube/v3/search?q=${search}&part=snippet&key=${API_KEY}`)
-      console.log(data)
+      setSearchResult(data.items)
     } catch (err) {
-      console.log(err);
       setError(err);
     }
   }
@@ -28,7 +26,7 @@ const Home = () => {
 
   let results = `No Search Results. Search for videos above!`
   if (searchResult.length) {
-    results = searchResult.map((result) => <div key={result.id.videoId}>Thumbnails video={result}/></div>)
+    results = searchResult.map((result) => <div key={result.id.videoId}><Thumbnails video={result}/></div>)
   }
 
   return(
